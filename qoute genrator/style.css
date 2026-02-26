@@ -1,0 +1,33 @@
+body {
+ height: 100vh;   
+}
+
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+h1{
+    border: 2px solid green;
+    border-radius: 5px;
+    padding: 10px 10px ;
+}
+.btn{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    margin-top: 10%;
+    font-size: 15px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+body {
+  transition: background-color 0.5s ease;
+}
