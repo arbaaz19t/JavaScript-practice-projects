@@ -6,7 +6,36 @@
     <title>IncomeTAX-Calculatoer</title>
 </head>
 <style> body{
- height:100vh; background-color: #f1f1f2; display: flex; align-items: center; justify-content: center; color: black;}</style>
+ height:100vh; background-color: #f1f1f2; display: flex; align-items: center; justify-content: center; color: black;}
+ .main{
+    height: 500px;
+    min-width: 400px;
+    background-color: bisque;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+ }
+ #income{
+    height: 25px;
+    color: black;
+    background-color: beige;
+    border-radius: 5px;
+    width: 300px;
+ }
+ button{
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #f18f1f;
+    font-weight: bold;
+ }
+ button:hover{
+    background-color:#e68312;
+    color: #f1f1ff;
+ }
+
+ </style>
+ 
 <body>
     <div class="main">
         <h1>TAX Calculator</h1>
@@ -15,7 +44,7 @@
             <input type="number" id="income" name="income" placeholder="Enter Your Income">
             <br>
             <br>
-            <button type="submit"> Calculate Income</button>
+            <button type="submit"> Calculate</button>
         </form>
         <h2>Total TAX</h2>
     </div>

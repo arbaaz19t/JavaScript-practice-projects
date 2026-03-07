@@ -16,6 +16,6 @@ form.addEventListener('submit', function (e) {
     } else if (AmountEarn <= 2400000)
         TotalTAx = (AmountEarn - 1200000) * 0.25 + 60000 + 80000;
 
-    REsult.textContent = `TOTAL TAX : ${TotalTAx}`;
+    REsult.textContent = `TOTAL TAX : ${TotalTAx} amout you must have to pay `;
     form.reset()
 })
