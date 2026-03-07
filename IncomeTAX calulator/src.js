@@ -1,21 +1,31 @@
-const form = document.querySelector('form');
-form.addEventListener('submit', function (e) {
+const form = document.querySelector("form");
+const result = document.querySelector("h2");
+
+form.addEventListener("submit", function (e) {
     e.preventDefault();
-    const Income = document.querySelector("#income");
-    const AmountEarn = parseInt(Income.value);
-    const REsult = document.querySelector('h2');
-    let TotalTAx = 0;
-    if (AmountEarn <= 1200000) {
-        TotalTAx = 0;
-    } else if (AmountEarn <= 1600000) {
-        TotalTAx = (AmountEarn - 1200000) * 0.15;
 
-    }else if (AmountEarn <= 2000000) {
-        TotalTAx = (AmountEarn - 1200000) * 0.20 + 60000;
+    const incomeInput = document.querySelector("#income");
+    const amountEarn = Number(incomeInput.value);
 
-    } else if (AmountEarn <= 2400000)
-        TotalTAx = (AmountEarn - 1200000) * 0.25 + 60000 + 80000;
+    if (!amountEarn || amountEarn < 0) {
+        result.textContent = "Enter valid income";
+        return;
+    }
 
-    REsult.textContent = `TOTAL TAX : ${TotalTAx} amout you must have to pay `;
-    form.reset()
-})
+    let totalTax = 0;
+
+    if (amountEarn <= 1200000) {
+        totalTax = 0;
+    } 
+    else if (amountEarn <= 1600000) {
+        totalTax = (amountEarn - 1200000) * 0.15;
+    } 
+    else if (amountEarn <= 2000000) {
+        totalTax = 60000 + (amountEarn - 1600000) * 0.20;
+    } 
+    else {
+        totalTax = 140000 + (amountEarn - 2000000) * 0.25;
+    }
+
+    result.textContent = `TOTAL TAX : ₹${totalTax.toLocaleString("en-IN")}`;
+});
